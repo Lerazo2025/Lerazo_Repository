@@ -3,18 +3,54 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="primefaces">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <f:view>
-    <h1>Aplicacion Cajero Automatico</h1>
-    <h2>Integrantes</h2>
-   <h:body>
-       <ul>
-           <li>Luis Antonio Erazo Zamora - Cuenta 202110010752</li>
-       </ul>
 
-       <h:link value="Menu" outcome="index.Xhtml" style="display: block; text-align: center; margin-top: 10px;" />
-   </h:body>
+    <h:head>
+        <title>Portada Cajero</title>
+        <style>
+            .contenedor{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #0e2a53;
+            }
+
+            .content-box {
+                width: 400px;
+                padding: 30px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+
+
+        </style>
+
+    </h:head>
+
+    <h:body>
+        <div class="contenedor">
+            <p:outputPanel styleClass="content-box">
+                <h1>Aplicación Cajero Automático</h1>
+                <h3>Kenny Joseph Cooper Aleman</h3>
+                <h3>Programacion Web II (Chol-Z/LU-3) 2P25</h3>
+                <h3>Grupo #7</h3>
+                <h3>Integrantes</h3>
+                <ul>
+                    <li>Luis Antonio Erazo Zamora - Cuenta 202110010752</li>
+                </ul>
+<br>
+
+</br>
+                <h:link value="Volver a Menú" outcome="index.xhtml" styleClass="menu-link" />
+            </p:outputPanel>
+        </div>
+    </h:body>
+
 </f:view>
 </html>

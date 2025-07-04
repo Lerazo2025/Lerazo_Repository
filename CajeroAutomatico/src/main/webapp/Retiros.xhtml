@@ -40,7 +40,17 @@
 
             .menu-button {
                 width: 80%;
+                padding: 12px 20px;
                 margin-bottom: 15px;
+                background: linear-gradient(135deg, #bce3ff, #287fd3);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: bold;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                cursor: pointer;
+                transition: all 0.3s ease;
             }
 
         </style>
@@ -48,7 +58,7 @@
     <h:body>
         <p:outputPanel styleClass="menu-card">
    <h:form>
-       <h1>Retiros</h1>
+       <h1 style="color: #022268">Realizar Retiro</h1>
        <p:panelGrid columns="2"
                     layout="grid"
                     styleClass="form-grid"
@@ -60,17 +70,24 @@
          <h:outputLabel value="Pin" for="Pin"/>
          <p:password id="Pin" value="#{Client_bean.pincliente}" placeholder="Ingrese numero de Pin"/>
 
-         <h:outputLabel value="Efectivo" for="Efectivo"/>
-         <p:inputText id="Efectivo" value="#{Client_bean.efectivocliente}" placeholder="Ingrese valor a Retirar"/>
+           <h:outputLabel value="Efectivo" for="Efectivo"/>
+           <p:inputText id="Efectivo" value="#{Client_bean.efectivocliente}" placeholder="Ingrese valor a Retirar" label="Efectivo">
+           <f:validateRequired message="Ingrese un valor válido" />
+           </p:inputText>
+
+           <p:message for="Efectivo" />
+
    </p:panelGrid>
        <br></br>
-         <h:commandButton value="Procesar Retiro" action="#{Client_bean.retiro}"/>
+       <br></br>
+       <br></br>
+         <h:commandButton value="Procesar Retiro" action="#{Client_bean.retiro}" styleClass="menu-button"/>
        <br></br>
        <br></br>
          <h:messages globalOnly="true"/>
        <br></br>
        <br></br>
-       <h:link value="Menu" outcome="index.Xhtml" style="display: block; text-align: center; margin-top: 10px;" />
+       <h:link value="Volver a Menu" outcome="index.Xhtml" style="display: block; text-align: center; margin-top: 10px;" />
    </h:form>
 
         </p:outputPanel>

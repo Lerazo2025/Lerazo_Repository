@@ -62,6 +62,7 @@ public class Controladorbean implements Serializable {
             return;
 
         }
+
         if(cliente.getSaldo()<efectivocliente){
             mostrarmensaje("Saldo Insuficiente");
             return;
