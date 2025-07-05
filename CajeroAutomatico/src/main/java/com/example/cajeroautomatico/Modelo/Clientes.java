@@ -7,8 +7,8 @@ private String pin;
 
 
     public Clientes(String numeroCuenta, double saldo, String pin) {
-        NumeroCuenta = numeroCuenta;
-        Saldo = saldo;
+        this.NumeroCuenta = numeroCuenta;
+        this.Saldo = saldo;
         this.pin = pin;
     }
 

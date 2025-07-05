@@ -54,18 +54,13 @@
         cursor: pointer;
         transition: all 0.3s ease;
       }
-
     </style>
   </h:head>
-
   <h:body>
     <p:outputPanel styleClass="menu-card">
       <h:form>
         <h1 style="color: #022268">Realizar Deposito</h1>
-        <p:panelGrid columns="2"
-                     layout="grid"
-                     styleClass="form-grid"
-                     columnClasses="label-column, input-column">
+        <p:panelGrid columns="2" layout="grid" styleClass="form-grid" columnClasses="label-column, input-column">
 
           <h:outputLabel value="Cuenta" for="Cuenta"/>
           <p:inputText id="Cuenta" value="#{Client_bean.cuentacliente}" placeholder="Ingrese numero de Cuenta"/>
@@ -77,7 +72,6 @@
           <p:inputText id="Efectivo" value="#{Client_bean.efectivocliente}" placeholder="Ingrese valor a Depositar" label="Efectivo" required="true">
           <f:validateRequired message="Ingrese un valor valido" />
           </p:inputText>
-
           <p:message for="Efectivo" />
         </p:panelGrid>
         <br></br>
@@ -90,9 +84,7 @@
         <br></br>
         <br></br>
         <h:link value="Volver a Menu" outcome="index.Xhtml" style="display: block; text-align: center; margin-top: 10px;" />
-
       </h:form>
-
     </p:outputPanel>
   </h:body>
 </f:view>

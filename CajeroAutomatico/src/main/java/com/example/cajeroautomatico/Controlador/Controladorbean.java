@@ -33,7 +33,7 @@ public class Controladorbean implements Serializable {
     public void deposito(){
     Clientes cliente = buscarCliente();
     if(cliente==null){
-        mostrarmensaje("Cuenta o Pin Invalido");
+        mostrarmensaje("Cuenta o Pin Invalido, favor verifique");
         return;
     }
     if(efectivocliente<=0){
@@ -54,7 +54,7 @@ public class Controladorbean implements Serializable {
     public void retiro(){
         Clientes cliente = buscarCliente();
         if(cliente==null){
-            mostrarmensaje("Cuenta o Pin Invalido");
+            mostrarmensaje("Cuenta o Pin Invalido, favor verifique\"");
             return;
         }
         if(efectivocliente<=0){
@@ -64,7 +64,7 @@ public class Controladorbean implements Serializable {
         }
 
         if(cliente.getSaldo()<efectivocliente){
-            mostrarmensaje("Saldo Insuficiente");
+            mostrarmensaje("Su Saldo es insuficiente");
             return;
 
         }
